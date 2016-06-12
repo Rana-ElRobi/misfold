@@ -1,7 +1,7 @@
 class CreateTranscripts < ActiveRecord::Migration
   def change
     create_table :transcripts do |t|
-      t.integer :id
+      t.integer :transcriptid
       t.string :name
       t.boolean :iscolonical
       t.string :sequence

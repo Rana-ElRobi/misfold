@@ -1,7 +1,7 @@
 class CreateDisjointFroms < ActiveRecord::Migration
   def change
     create_table :disjoint_froms do |t|
-      t.string :id
+      t.string :disjointid
       t.string :name
       t.array :neighbors
 

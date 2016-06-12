@@ -1,7 +1,7 @@
 class CreateMisfoldmodles < ActiveRecord::Migration
   def change
     create_table :misfoldmodles do |t|
-      t.integer :id
+      t.integer :misfoldid
       t.string :type
       t.string :refseqm
       t.string :refseqp

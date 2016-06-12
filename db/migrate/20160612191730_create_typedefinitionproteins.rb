@@ -1,7 +1,7 @@
 class CreateTypedefinitionproteins < ActiveRecord::Migration
   def change
     create_table :typedefinitionproteins do |t|
-      t.string :id
+      t.string :typedefinitionproteinid
       t.string :name
       t.array :neighbors
       t.string :synonym

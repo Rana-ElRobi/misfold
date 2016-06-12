@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :isadiseaseneighbors
+  resources :typedefinitiondiseaseneighbors
+  resources :diseasesynonyms
+  resources :disxrefs
+  resources :diseasesubsets
+  resources :intersectionneighbors
+  resources :relationshipneighbors
+  resources :isaproneighbors
+  resources :typedefinitionproteinneighbors
+  resources :disjointneighbors
+  resources :xrefproteins
+  resources :synonymproteins
+  resources :goannotations
+  resources :keywords
   resources :is_adiseases
   resources :typedefinitiondiseases
   resources :diseaseontologies

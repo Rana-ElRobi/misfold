@@ -1,10 +1,10 @@
 class CreateGos < ActiveRecord::Migration
   def change
     create_table :gos do |t|
-      t.string :id
-      t.string :url
-      t.string :description
-      t.array :annotations
+      t.string :goid
+      t.string :gourl
+      t.string :godescription
+      t.array :goannotations
 
       t.timestamps null: false
     end

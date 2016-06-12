@@ -1,4 +1,35 @@
 Rails.application.routes.draw do
+  resources :is_adiseases
+  resources :typedefinitiondiseases
+  resources :diseaseontologies
+  resources :pathologies
+  resources :organs
+  resources :siseasclasses
+  resources :diseasefamilies
+  resources :omims
+  resources :diseases
+  resources :references
+  resources :misfoldmodles
+  resources :intersection_ofs
+  resources :relationships
+  resources :is_aproteins
+  resources :typedefinitionproteins
+  resources :disjoint_froms
+  resources :proteinontologies
+  resources :externalsoforms
+  resources :transcriptmodificationregions
+  resources :transcripts
+  resources :gos
+  resources :posttranslationalmodifications
+  resources :pathways
+  resources :conservedregions
+  resources :predictiontools
+  resources :functions
+  resources :twodstructureregions
+  resources :pdbs
+  resources :genes
+  resources :proteinnames
+  resources :proteins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

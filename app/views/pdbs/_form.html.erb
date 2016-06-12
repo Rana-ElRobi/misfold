@@ -1,0 +1,33 @@
+<%= form_for(@pdb) do |f| %>
+  <% if @pdb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdb.errors.count, "error") %> prohibited this pdb from being saved:</h2>
+
+      <ul>
+      <% @pdb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :identificationmethod %><br>
+    <%= f.text_field :identificationmethod %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

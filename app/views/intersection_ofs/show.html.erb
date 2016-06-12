@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @intersection_of.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @intersection_of.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @intersection_of.neighbors %>
+</p>
+
+<%= link_to 'Edit', edit_intersection_of_path(@intersection_of) %> |
+<%= link_to 'Back', intersection_ofs_path %>

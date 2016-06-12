@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grosspicture:</strong>
+  <%= @pathology.grosspicture %>
+</p>
+
+<p>
+  <strong>Microscopicpicture:</strong>
+  <%= @pathology.microscopicpicture %>
+</p>
+
+<%= link_to 'Edit', edit_pathology_path(@pathology) %> |
+<%= link_to 'Back', pathologies_path %>

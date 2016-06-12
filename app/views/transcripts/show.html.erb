@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @transcript.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @transcript.name %>
+</p>
+
+<p>
+  <strong>Iscolonical:</strong>
+  <%= @transcript.iscolonical %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @transcript.sequence %>
+</p>
+
+<p>
+  <strong>Refrencesequence:</strong>
+  <%= @transcript.refrencesequence %>
+</p>
+
+<p>
+  <strong>Alternativename:</strong>
+  <%= @transcript.alternativename %>
+</p>
+
+<%= link_to 'Edit', edit_transcript_path(@transcript) %> |
+<%= link_to 'Back', transcripts_path %>

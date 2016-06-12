@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Doid:</strong>
+  <%= @diseaseontology.doid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @diseaseontology.name %>
+</p>
+
+<p>
+  <strong>Alt:</strong>
+  <%= @diseaseontology.alt_id %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @diseaseontology.definition %>
+</p>
+
+<p>
+  <strong>Subset:</strong>
+  <%= @diseaseontology.subset %>
+</p>
+
+<p>
+  <strong>Synonym:</strong>
+  <%= @diseaseontology.synonym %>
+</p>
+
+<p>
+  <strong>Xref:</strong>
+  <%= @diseaseontology.xref %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @diseaseontology.created_by %>
+</p>
+
+<p>
+  <strong>Creation date:</strong>
+  <%= @diseaseontology.creation_date %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @diseaseontology.url %>
+</p>
+
+<%= link_to 'Edit', edit_diseaseontology_path(@diseaseontology) %> |
+<%= link_to 'Back', diseaseontologies_path %>

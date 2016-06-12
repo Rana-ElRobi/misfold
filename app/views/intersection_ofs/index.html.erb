@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Intersection Ofs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Neighbors</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intersection_ofs.each do |intersection_of| %>
+      <tr>
+        <td><%= intersection_of.id %></td>
+        <td><%= intersection_of.name %></td>
+        <td><%= intersection_of.neighbors %></td>
+        <td><%= link_to 'Show', intersection_of %></td>
+        <td><%= link_to 'Edit', edit_intersection_of_path(intersection_of) %></td>
+        <td><%= link_to 'Destroy', intersection_of, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intersection of', new_intersection_of_path %>

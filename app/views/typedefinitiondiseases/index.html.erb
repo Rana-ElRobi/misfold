@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Typedefinitiondiseases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Neighbors</th>
+      <th>Definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @typedefinitiondiseases.each do |typedefinitiondisease| %>
+      <tr>
+        <td><%= typedefinitiondisease.id %></td>
+        <td><%= typedefinitiondisease.name %></td>
+        <td><%= typedefinitiondisease.neighbors %></td>
+        <td><%= typedefinitiondisease.definition %></td>
+        <td><%= link_to 'Show', typedefinitiondisease %></td>
+        <td><%= link_to 'Edit', edit_typedefinitiondisease_path(typedefinitiondisease) %></td>
+        <td><%= link_to 'Destroy', typedefinitiondisease, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Typedefinitiondisease', new_typedefinitiondisease_path %>

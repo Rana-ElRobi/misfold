@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Diseaseontologies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Doid</th>
+      <th>Name</th>
+      <th>Alt</th>
+      <th>Definition</th>
+      <th>Subset</th>
+      <th>Synonym</th>
+      <th>Xref</th>
+      <th>Created by</th>
+      <th>Creation date</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diseaseontologies.each do |diseaseontology| %>
+      <tr>
+        <td><%= diseaseontology.doid %></td>
+        <td><%= diseaseontology.name %></td>
+        <td><%= diseaseontology.alt_id %></td>
+        <td><%= diseaseontology.definition %></td>
+        <td><%= diseaseontology.subset %></td>
+        <td><%= diseaseontology.synonym %></td>
+        <td><%= diseaseontology.xref %></td>
+        <td><%= diseaseontology.created_by %></td>
+        <td><%= diseaseontology.creation_date %></td>
+        <td><%= diseaseontology.url %></td>
+        <td><%= link_to 'Show', diseaseontology %></td>
+        <td><%= link_to 'Edit', edit_diseaseontology_path(diseaseontology) %></td>
+        <td><%= link_to 'Destroy', diseaseontology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diseaseontology', new_diseaseontology_path %>

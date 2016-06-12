@@ -1,0 +1,21 @@
+<%= form_for(@externalsoform) do |f| %>
+  <% if @externalsoform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@externalsoform.errors.count, "error") %> prohibited this externalsoform from being saved:</h2>
+
+      <ul>
+      <% @externalsoform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

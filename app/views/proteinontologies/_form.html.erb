@@ -1,0 +1,49 @@
+<%= form_for(@proteinontology) do |f| %>
+  <% if @proteinontology.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proteinontology.errors.count, "error") %> prohibited this proteinontology from being saved:</h2>
+
+      <ul>
+      <% @proteinontology.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prid %><br>
+    <%= f.text_field :prid %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :definition %><br>
+    <%= f.text_field :definition %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :synonym %><br>
+    <%= f.text_field :synonym %>
+  </div>
+  <div class="field">
+    <%= f.label :namespace %><br>
+    <%= f.text_field :namespace %>
+  </div>
+  <div class="field">
+    <%= f.label :xref %><br>
+    <%= f.text_field :xref %>
+  </div>
+  <div class="field">
+    <%= f.label :is_obsolete %><br>
+    <%= f.check_box :is_obsolete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

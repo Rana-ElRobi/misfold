@@ -1,0 +1,29 @@
+<%= form_for(@omim) do |f| %>
+  <% if @omim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@omim.errors.count, "error") %> prohibited this omim from being saved:</h2>
+
+      <ul>
+      <% @omim.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :omimid %><br>
+    <%= f.text_field :omimid %>
+  </div>
+  <div class="field">
+    <%= f.label :omimurl %><br>
+    <%= f.text_field :omimurl %>
+  </div>
+  <div class="field">
+    <%= f.label :moodofinheritnce %><br>
+    <%= f.text_field :moodofinheritnce %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

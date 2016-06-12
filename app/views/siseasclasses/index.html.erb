@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Siseasclasses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Diseasclass</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @siseasclasses.each do |siseasclass| %>
+      <tr>
+        <td><%= siseasclass.diseasclass %></td>
+        <td><%= link_to 'Show', siseasclass %></td>
+        <td><%= link_to 'Edit', edit_siseasclass_path(siseasclass) %></td>
+        <td><%= link_to 'Destroy', siseasclass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Siseasclass', new_siseasclass_path %>

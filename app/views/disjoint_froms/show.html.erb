@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @disjoint_from.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @disjoint_from.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @disjoint_from.neighbors %>
+</p>
+
+<%= link_to 'Edit', edit_disjoint_from_path(@disjoint_from) %> |
+<%= link_to 'Back', disjoint_froms_path %>

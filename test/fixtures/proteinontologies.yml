@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prid: MyString
+  name: MyString
+  definition: MyString
+  comment: MyString
+  synonym: 
+  namespace: MyString
+  xref: 
+  is_obsolete: false
+
+two:
+  prid: MyString
+  name: MyString
+  definition: MyString
+  comment: MyString
+  synonym: 
+  namespace: MyString
+  xref: 
+  is_obsolete: false

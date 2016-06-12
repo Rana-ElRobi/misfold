@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doid: MyString
+  name: MyString
+  alt_id: MyString
+  definition: MyString
+  subset: 
+  synonym: 
+  xref: 
+  created_by: MyString
+  creation_date: MyString
+  url: MyString
+
+two:
+  doid: MyString
+  name: MyString
+  alt_id: MyString
+  definition: MyString
+  subset: 
+  synonym: 
+  xref: 
+  created_by: MyString
+  creation_date: MyString
+  url: MyString

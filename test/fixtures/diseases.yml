@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  diseaseid: MyString
+  icd10id: MyString
+  pathogenesis: MyString
+  clinicalpicture: MyString
+  diseasename: MyString
+
+two:
+  diseaseid: MyString
+  icd10id: MyString
+  pathogenesis: MyString
+  clinicalpicture: MyString
+  diseasename: MyString

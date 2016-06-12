@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Typedefinitionproteins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Neighbors</th>
+      <th>Synonym</th>
+      <th>Definition</th>
+      <th>Comment</th>
+      <th>Is transitive</th>
+      <th>Is obsolete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @typedefinitionproteins.each do |typedefinitionprotein| %>
+      <tr>
+        <td><%= typedefinitionprotein.id %></td>
+        <td><%= typedefinitionprotein.name %></td>
+        <td><%= typedefinitionprotein.neighbors %></td>
+        <td><%= typedefinitionprotein.synonym %></td>
+        <td><%= typedefinitionprotein.definition %></td>
+        <td><%= typedefinitionprotein.comment %></td>
+        <td><%= typedefinitionprotein.is_transitive %></td>
+        <td><%= typedefinitionprotein.is_obsolete %></td>
+        <td><%= link_to 'Show', typedefinitionprotein %></td>
+        <td><%= link_to 'Edit', edit_typedefinitionprotein_path(typedefinitionprotein) %></td>
+        <td><%= link_to 'Destroy', typedefinitionprotein, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Typedefinitionprotein', new_typedefinitionprotein_path %>

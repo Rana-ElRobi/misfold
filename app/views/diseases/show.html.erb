@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Diseaseid:</strong>
+  <%= @disease.diseaseid %>
+</p>
+
+<p>
+  <strong>Icd10id:</strong>
+  <%= @disease.icd10id %>
+</p>
+
+<p>
+  <strong>Pathogenesis:</strong>
+  <%= @disease.pathogenesis %>
+</p>
+
+<p>
+  <strong>Clinicalpicture:</strong>
+  <%= @disease.clinicalpicture %>
+</p>
+
+<p>
+  <strong>Diseasename:</strong>
+  <%= @disease.diseasename %>
+</p>
+
+<%= link_to 'Edit', edit_disease_path(@disease) %> |
+<%= link_to 'Back', diseases_path %>

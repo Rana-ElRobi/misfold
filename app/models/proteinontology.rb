@@ -7,4 +7,6 @@ class Proteinontology < ActiveRecord::Base
 	has_one :relationship
 	has_one :intersection_of
 	has_many :typedefinitionprotein
+	has_many :synonymprotein
+	has_many :xrefprotein
 end

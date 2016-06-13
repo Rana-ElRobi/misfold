@@ -1,5 +1,5 @@
 class Proteinontology < ActiveRecord::Base
-	attr_accessible :prid :name :definition :comment :synonym :namespace :xref :is_obsolete
+	attr_accessible :prid :name :definition :comment :namespace :is_obsolete
 
 	belongs_to :protein
 	has_one :disjoint_from

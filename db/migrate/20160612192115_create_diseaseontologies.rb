@@ -6,8 +6,7 @@ class CreateDiseaseontologies < ActiveRecord::Migration
       t.string :alt_id
       t.string :definition
       t.array :subset
-      t.array :synonym
-      t.array :xref
+     
       t.string :created_by
       t.string :creation_date
       t.string :url

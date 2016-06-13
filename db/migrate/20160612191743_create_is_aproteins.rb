@@ -3,7 +3,6 @@ class CreateIsAproteins < ActiveRecord::Migration
     create_table :is_aproteins do |t|
       t.string :isaproteinid
       t.string :name
-      t.array :neighbors
 
       t.timestamps null: false
     end

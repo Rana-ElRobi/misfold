@@ -4,7 +4,8 @@ class CreateGos < ActiveRecord::Migration
       t.string :goid
       t.string :gourl
       t.string :godescription
-      t.array :goannotations
+      
+      
 
       t.timestamps null: false
     end

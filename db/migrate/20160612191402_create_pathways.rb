@@ -2,7 +2,7 @@ class CreatePathways < ActiveRecord::Migration
   def change
     create_table :pathways do |t|
       t.integer :pathwayid
-      t.string :url
+      t.string :pathwayurl
 
       t.timestamps null: false
     end

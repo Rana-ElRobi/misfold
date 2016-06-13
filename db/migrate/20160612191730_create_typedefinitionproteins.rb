@@ -3,7 +3,7 @@ class CreateTypedefinitionproteins < ActiveRecord::Migration
     create_table :typedefinitionproteins do |t|
       t.string :typedefinitionproteinid
       t.string :name
-      t.array :neighbors
+      
       t.string :synonym
       t.string :definition
       t.string :comment

@@ -3,7 +3,6 @@ class CreateRelationships < ActiveRecord::Migration
     create_table :relationships do |t|
       t.string :relationshipid
       t.string :name
-      t.array :neighbors
       t.string :type
 
       t.timestamps null: false

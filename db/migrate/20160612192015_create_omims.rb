@@ -1,7 +1,7 @@
 class CreateOmims < ActiveRecord::Migration
   def change
     create_table :omims do |t|
-      t.int :omimid
+      t.integer :omimid
       t.string :omimurl
       t.string :moodofinheritnce
 

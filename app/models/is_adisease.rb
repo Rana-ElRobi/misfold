@@ -1,6 +1,7 @@
 class IsAdisease < ActiveRecord::Base
-	attr_accessible :isadiseaseid :name  
+	self.table_name = "is_adiseases"
+	attr_accessor :isadiseaseid, :name  
 
 	belongs_to :diseaseontology
-	has_many :isadiseaseneighborz
+	has_many :isadiseaseneighbor
 end

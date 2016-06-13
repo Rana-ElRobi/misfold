@@ -3,7 +3,7 @@ class CreateDisjointFroms < ActiveRecord::Migration
     create_table :disjoint_froms do |t|
       t.string :disjointid
       t.string :name
-      t.array :neighbors
+      t.string :neighbors
 
       t.timestamps null: false
     end

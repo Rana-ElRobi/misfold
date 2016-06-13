@@ -5,7 +5,7 @@ class CreateDiseaseontologies < ActiveRecord::Migration
       t.string :name
       t.string :alt_id
       t.string :definition
-      t.array :subset
+      t.string :subset
      
       t.string :created_by
       t.string :creation_date

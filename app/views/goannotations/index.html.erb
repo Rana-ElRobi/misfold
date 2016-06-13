@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Goannotations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Annotate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goannotations.each do |goannotation| %>
+      <tr>
+        <td><%= goannotation.annotate %></td>
+        <td><%= link_to 'Show', goannotation %></td>
+        <td><%= link_to 'Edit', edit_goannotation_path(goannotation) %></td>
+        <td><%= link_to 'Destroy', goannotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goannotation', new_goannotation_path %>

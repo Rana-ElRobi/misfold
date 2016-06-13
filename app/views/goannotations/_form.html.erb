@@ -1,0 +1,21 @@
+<%= form_for(@goannotation) do |f| %>
+  <% if @goannotation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goannotation.errors.count, "error") %> prohibited this goannotation from being saved:</h2>
+
+      <ul>
+      <% @goannotation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :annotate %><br>
+    <%= f.text_field :annotate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

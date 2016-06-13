@@ -1,0 +1,21 @@
+<%= form_for(@xrefprotein) do |f| %>
+  <% if @xrefprotein.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xrefprotein.errors.count, "error") %> prohibited this xrefprotein from being saved:</h2>
+
+      <ul>
+      <% @xrefprotein.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :xrefname %><br>
+    <%= f.text_field :xrefname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

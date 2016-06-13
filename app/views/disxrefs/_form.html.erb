@@ -1,0 +1,21 @@
+<%= form_for(@disxref) do |f| %>
+  <% if @disxref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disxref.errors.count, "error") %> prohibited this disxref from being saved:</h2>
+
+      <ul>
+      <% @disxref.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :xref %><br>
+    <%= f.text_field :xref %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

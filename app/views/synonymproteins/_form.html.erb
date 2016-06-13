@@ -1,0 +1,21 @@
+<%= form_for(@synonymprotein) do |f| %>
+  <% if @synonymprotein.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@synonymprotein.errors.count, "error") %> prohibited this synonymprotein from being saved:</h2>
+
+      <ul>
+      <% @synonymprotein.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :synonymname %><br>
+    <%= f.text_field :synonymname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for(@diseasesubset) do |f| %>
+  <% if @diseasesubset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diseasesubset.errors.count, "error") %> prohibited this diseasesubset from being saved:</h2>
+
+      <ul>
+      <% @diseasesubset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subset %><br>
+    <%= f.text_field :subset %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Isaproneighbors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Neighbor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @isaproneighbors.each do |isaproneighbor| %>
+      <tr>
+        <td><%= isaproneighbor.neighbor %></td>
+        <td><%= link_to 'Show', isaproneighbor %></td>
+        <td><%= link_to 'Edit', edit_isaproneighbor_path(isaproneighbor) %></td>
+        <td><%= link_to 'Destroy', isaproneighbor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Isaproneighbor', new_isaproneighbor_path %>

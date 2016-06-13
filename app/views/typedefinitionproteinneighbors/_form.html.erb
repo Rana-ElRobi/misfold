@@ -1,0 +1,21 @@
+<%= form_for(@typedefinitionproteinneighbor) do |f| %>
+  <% if @typedefinitionproteinneighbor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@typedefinitionproteinneighbor.errors.count, "error") %> prohibited this typedefinitionproteinneighbor from being saved:</h2>
+
+      <ul>
+      <% @typedefinitionproteinneighbor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :neighbor %><br>
+    <%= f.text_field :neighbor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

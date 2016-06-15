@@ -125,10 +125,10 @@ class ProteinsController < ApplicationController
     ncbi = Bio::NCBI::REST::EFetch.new
     
     #to fetch gene sequence
-    ncbi.nucleotide(list)
+    @gene = ncbi.nucleotide(list)
 
     #to fetch protein sequence
-    ncbi.protein(list)
+    @proteinseq = ncbi.protein(list)
   end
 
   private

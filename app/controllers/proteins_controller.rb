@@ -142,6 +142,18 @@ class ProteinsController < ApplicationController
     @omim = ncbi.omim(list)
   end
 
+  #this function should return
+  #KEGG ID
+  #Pathway URL 
+  #get_pathways_by_genes(genes_id_list)
+  #http://www.hpa-bioinformatics.org.uk/bioruby-api/classes/Bio/KEGG/API.html
+  def kegg
+    #ta2reban ncbi ids
+    list = [gene_ids]
+    serv = Bio::KEGG::API.new
+    @pathways = serv.get_pathways_by_genes(list)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_protein

@@ -119,6 +119,14 @@ class ProteinsController < ApplicationController
       #Returns
       ##String
 
+  # omim(ids, format = "detailed", hash = {})
+  # Retrieve OMIM entries by given IDs using E-Utils (efetch).
+      #Arguments:
+      ##ids: list of NCBI entry IDs (required)
+      #format: “gp”, “gpc”, “fasta”, “acc”, “xml” etc.
+      #Returns
+      ##String
+
   def ncbi
     #list of NCBI ids
     list = []
@@ -129,6 +137,9 @@ class ProteinsController < ApplicationController
 
     #to fetch protein sequence
     @proteinseq = ncbi.protein(list)
+
+    #to fetch omim data
+    @omim = ncbi.omim(list)
   end
 
   private

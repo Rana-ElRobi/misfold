@@ -143,15 +143,21 @@ class ProteinsController < ApplicationController
   end
 
   #this function should return
-  #KEGG ID
-  #Pathway URL 
-  #get_pathways_by_genes(genes_id_list)
+  #input : KEGG ID
+  #result : Pathway URL 
   #http://www.hpa-bioinformatics.org.uk/bioruby-api/classes/Bio/KEGG/API.html
+  #Bio::KEGG::API#save_image(url, filename = nil)
+  #Some methods of the KEGG API will return a URL of the generated image. 
+  #This method save an image specified by the URL. 
+  #The filename can be specified by its second argument, 
+  #otherwise basename of the URL will be used.
+
+
   def kegg
     #ta2reban ncbi ids
     list = [gene_ids]
-    serv = Bio::KEGG::API.new
-    @pathways = serv.get_pathways_by_genes(list)
+    #serv = Bio::KEGG::API.new
+    #@pathways = serv.get_pathways_by_genes(list)
   end
 
   private

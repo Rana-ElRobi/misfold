@@ -1,0 +1,25 @@
+<%= form_for(@pathology) do |f| %>
+  <% if @pathology.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pathology.errors.count, "error") %> prohibited this pathology from being saved:</h2>
+
+      <ul>
+      <% @pathology.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :grosspicture %><br>
+    <%= f.text_field :grosspicture %>
+  </div>
+  <div class="field">
+    <%= f.label :microscopicpicture %><br>
+    <%= f.text_field :microscopicpicture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Predictiontools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @predictiontools.each do |predictiontool| %>
+      <tr>
+        <td><%= predictiontool.name %></td>
+        <td><%= link_to 'Show', predictiontool %></td>
+        <td><%= link_to 'Edit', edit_predictiontool_path(predictiontool) %></td>
+        <td><%= link_to 'Destroy', predictiontool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Predictiontool', new_predictiontool_path %>

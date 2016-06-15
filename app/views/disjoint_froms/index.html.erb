@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Disjoint Froms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Neighbors</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disjoint_froms.each do |disjoint_from| %>
+      <tr>
+        <td><%= disjoint_from.id %></td>
+        <td><%= disjoint_from.name %></td>
+        <td><%= disjoint_from.neighbors %></td>
+        <td><%= link_to 'Show', disjoint_from %></td>
+        <td><%= link_to 'Edit', edit_disjoint_from_path(disjoint_from) %></td>
+        <td><%= link_to 'Destroy', disjoint_from, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Disjoint from', new_disjoint_from_path %>

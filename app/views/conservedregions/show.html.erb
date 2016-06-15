@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @conservedregion.name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @conservedregion.score %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @conservedregion.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @conservedregion.end %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @conservedregion.type %>
+</p>
+
+<%= link_to 'Edit', edit_conservedregion_path(@conservedregion) %> |
+<%= link_to 'Back', conservedregions_path %>

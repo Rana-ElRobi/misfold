@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Twodstructureregions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>End</th>
+      <th>Regiontype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twodstructureregions.each do |twodstructureregion| %>
+      <tr>
+        <td><%= twodstructureregion.start %></td>
+        <td><%= twodstructureregion.end %></td>
+        <td><%= twodstructureregion.regiontype %></td>
+        <td><%= link_to 'Show', twodstructureregion %></td>
+        <td><%= link_to 'Edit', edit_twodstructureregion_path(twodstructureregion) %></td>
+        <td><%= link_to 'Destroy', twodstructureregion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twodstructureregion', new_twodstructureregion_path %>

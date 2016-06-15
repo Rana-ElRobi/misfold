@@ -1,0 +1,29 @@
+<%= form_for(@disjoint_from) do |f| %>
+  <% if @disjoint_from.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disjoint_from.errors.count, "error") %> prohibited this disjoint_from from being saved:</h2>
+
+      <ul>
+      <% @disjoint_from.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :neighbors %><br>
+    <%= f.text_field :neighbors %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

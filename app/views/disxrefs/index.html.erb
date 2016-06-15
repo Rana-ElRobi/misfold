@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Disxrefs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Xref</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disxrefs.each do |disxref| %>
+      <tr>
+        <td><%= disxref.xref %></td>
+        <td><%= link_to 'Show', disxref %></td>
+        <td><%= link_to 'Edit', edit_disxref_path(disxref) %></td>
+        <td><%= link_to 'Destroy', disxref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Disxref', new_disxref_path %>

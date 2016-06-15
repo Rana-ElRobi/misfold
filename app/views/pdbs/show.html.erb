@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @pdb.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pdb.name %>
+</p>
+
+<p>
+  <strong>Identificationmethod:</strong>
+  <%= @pdb.identificationmethod %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @pdb.url %>
+</p>
+
+<%= link_to 'Edit', edit_pdb_path(@pdb) %> |
+<%= link_to 'Back', pdbs_path %>

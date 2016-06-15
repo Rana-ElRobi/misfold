@@ -1,0 +1,25 @@
+<%= form_for(@diseasefamily) do |f| %>
+  <% if @diseasefamily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diseasefamily.errors.count, "error") %> prohibited this diseasefamily from being saved:</h2>
+
+      <ul>
+      <% @diseasefamily.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :familyid %><br>
+    <%= f.text_field :familyid %>
+  </div>
+  <div class="field">
+    <%= f.label :familyname %><br>
+    <%= f.text_field :familyname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@typedefinitiondisease) do |f| %>
+  <% if @typedefinitiondisease.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@typedefinitiondisease.errors.count, "error") %> prohibited this typedefinitiondisease from being saved:</h2>
+
+      <ul>
+      <% @typedefinitiondisease.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :neighbors %><br>
+    <%= f.text_field :neighbors %>
+  </div>
+  <div class="field">
+    <%= f.label :definition %><br>
+    <%= f.text_area :definition %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

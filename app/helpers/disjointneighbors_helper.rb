@@ -1,0 +1,2 @@
+module DisjointneighborsHelper
+end

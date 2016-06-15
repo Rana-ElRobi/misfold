@@ -1,0 +1,57 @@
+<%= form_for(@diseaseontology) do |f| %>
+  <% if @diseaseontology.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diseaseontology.errors.count, "error") %> prohibited this diseaseontology from being saved:</h2>
+
+      <ul>
+      <% @diseaseontology.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :doid %><br>
+    <%= f.text_field :doid %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :alt_id %><br>
+    <%= f.text_field :alt_id %>
+  </div>
+  <div class="field">
+    <%= f.label :definition %><br>
+    <%= f.text_field :definition %>
+  </div>
+  <div class="field">
+    <%= f.label :subset %><br>
+    <%= f.text_field :subset %>
+  </div>
+  <div class="field">
+    <%= f.label :synonym %><br>
+    <%= f.text_field :synonym %>
+  </div>
+  <div class="field">
+    <%= f.label :xref %><br>
+    <%= f.text_field :xref %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_date %><br>
+    <%= f.text_field :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

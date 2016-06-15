@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: MyString
+  url: MyString
+  retrievablereference: MyString
+  clinicalreference: MyString
+  otherresource: MyString
+
+two:
+  id: 1
+  title: MyString
+  url: MyString
+  retrievablereference: MyString
+  clinicalreference: MyString
+  otherresource: MyString

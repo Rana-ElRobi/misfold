@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prid:</strong>
+  <%= @proteinontology.prid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @proteinontology.name %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @proteinontology.definition %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @proteinontology.comment %>
+</p>
+
+<p>
+  <strong>Synonym:</strong>
+  <%= @proteinontology.synonym %>
+</p>
+
+<p>
+  <strong>Namespace:</strong>
+  <%= @proteinontology.namespace %>
+</p>
+
+<p>
+  <strong>Xref:</strong>
+  <%= @proteinontology.xref %>
+</p>
+
+<p>
+  <strong>Is obsolete:</strong>
+  <%= @proteinontology.is_obsolete %>
+</p>
+
+<%= link_to 'Edit', edit_proteinontology_path(@proteinontology) %> |
+<%= link_to 'Back', proteinontologies_path %>

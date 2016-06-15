@@ -1,0 +1,2 @@
+module ProteinnamesHelper
+end

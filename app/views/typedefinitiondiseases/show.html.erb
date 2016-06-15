@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @typedefinitiondisease.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @typedefinitiondisease.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @typedefinitiondisease.neighbors %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @typedefinitiondisease.definition %>
+</p>
+
+<%= link_to 'Edit', edit_typedefinitiondisease_path(@typedefinitiondisease) %> |
+<%= link_to 'Back', typedefinitiondiseases_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  name: MyString
+  neighbors: 
+  synonym: MyString
+  definition: MyString
+  comment: MyString
+  is_transitive: false
+  is_obsolete: false
+
+two:
+  id: MyString
+  name: MyString
+  neighbors: 
+  synonym: MyString
+  definition: MyString
+  comment: MyString
+  is_transitive: false
+  is_obsolete: false

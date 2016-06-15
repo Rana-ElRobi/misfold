@@ -1,0 +1,21 @@
+<%= form_for(@isadiseaseneighbor) do |f| %>
+  <% if @isadiseaseneighbor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@isadiseaseneighbor.errors.count, "error") %> prohibited this isadiseaseneighbor from being saved:</h2>
+
+      <ul>
+      <% @isadiseaseneighbor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :neighbor %><br>
+    <%= f.text_field :neighbor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

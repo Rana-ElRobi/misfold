@@ -1,0 +1,2 @@
+module PosttranslationalmodificationsHelper
+end

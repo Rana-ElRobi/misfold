@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Relationshipneighbors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Neighbor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relationshipneighbors.each do |relationshipneighbor| %>
+      <tr>
+        <td><%= relationshipneighbor.neighbor %></td>
+        <td><%= link_to 'Show', relationshipneighbor %></td>
+        <td><%= link_to 'Edit', edit_relationshipneighbor_path(relationshipneighbor) %></td>
+        <td><%= link_to 'Destroy', relationshipneighbor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relationshipneighbor', new_relationshipneighbor_path %>

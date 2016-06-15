@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @proteinname.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @proteinname.type %>
+</p>
+
+<p>
+  <strong>Isprimary:</strong>
+  <%= @proteinname.isprimary %>
+</p>
+
+<%= link_to 'Edit', edit_proteinname_path(@proteinname) %> |
+<%= link_to 'Back', proteinnames_path %>

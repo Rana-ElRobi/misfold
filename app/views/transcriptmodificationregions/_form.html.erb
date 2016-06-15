@@ -1,0 +1,29 @@
+<%= form_for(@transcriptmodificationregion) do |f| %>
+  <% if @transcriptmodificationregion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transcriptmodificationregion.errors.count, "error") %> prohibited this transcriptmodificationregion from being saved:</h2>
+
+      <ul>
+      <% @transcriptmodificationregion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.number_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.number_field :end %>
+  </div>
+  <div class="field">
+    <%= f.label :modification %><br>
+    <%= f.text_field :modification %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

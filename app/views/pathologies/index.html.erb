@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pathologies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grosspicture</th>
+      <th>Microscopicpicture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pathologies.each do |pathology| %>
+      <tr>
+        <td><%= pathology.grosspicture %></td>
+        <td><%= pathology.microscopicpicture %></td>
+        <td><%= link_to 'Show', pathology %></td>
+        <td><%= link_to 'Edit', edit_pathology_path(pathology) %></td>
+        <td><%= link_to 'Destroy', pathology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pathology', new_pathology_path %>

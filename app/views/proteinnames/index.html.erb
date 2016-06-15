@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Proteinnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Isprimary</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proteinnames.each do |proteinname| %>
+      <tr>
+        <td><%= proteinname.name %></td>
+        <td><%= proteinname.type %></td>
+        <td><%= proteinname.isprimary %></td>
+        <td><%= link_to 'Show', proteinname %></td>
+        <td><%= link_to 'Edit', edit_proteinname_path(proteinname) %></td>
+        <td><%= link_to 'Destroy', proteinname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proteinname', new_proteinname_path %>

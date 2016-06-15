@@ -1,0 +1,21 @@
+<%= form_for(@relationshipneighbor) do |f| %>
+  <% if @relationshipneighbor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@relationshipneighbor.errors.count, "error") %> prohibited this relationshipneighbor from being saved:</h2>
+
+      <ul>
+      <% @relationshipneighbor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :neighbor %><br>
+    <%= f.text_field :neighbor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

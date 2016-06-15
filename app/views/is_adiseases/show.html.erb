@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @is_adisease.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @is_adisease.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @is_adisease.neighbors %>
+</p>
+
+<%= link_to 'Edit', edit_is_adisease_path(@is_adisease) %> |
+<%= link_to 'Back', is_adiseases_path %>

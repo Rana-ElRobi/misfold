@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  type: 
+  refseqm: MyString
+  refseqp: MyString
+  nuclutidechange: MyString
+  molecularconsequence: MyString
+  aminoacidechange: MyString
+
+two:
+  id: 1
+  type: 
+  refseqm: MyString
+  refseqp: MyString
+  nuclutidechange: MyString
+  molecularconsequence: MyString
+  aminoacidechange: MyString

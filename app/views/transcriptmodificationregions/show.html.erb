@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @transcriptmodificationregion.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @transcriptmodificationregion.end %>
+</p>
+
+<p>
+  <strong>Modification:</strong>
+  <%= @transcriptmodificationregion.modification %>
+</p>
+
+<%= link_to 'Edit', edit_transcriptmodificationregion_path(@transcriptmodificationregion) %> |
+<%= link_to 'Back', transcriptmodificationregions_path %>

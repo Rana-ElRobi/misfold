@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @reference.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @reference.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @reference.url %>
+</p>
+
+<p>
+  <strong>Retrievablereference:</strong>
+  <%= @reference.retrievablereference %>
+</p>
+
+<p>
+  <strong>Clinicalreference:</strong>
+  <%= @reference.clinicalreference %>
+</p>
+
+<p>
+  <strong>Otherresource:</strong>
+  <%= @reference.otherresource %>
+</p>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>

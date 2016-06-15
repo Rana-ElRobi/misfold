@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Conservedregions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conservedregions.each do |conservedregion| %>
+      <tr>
+        <td><%= conservedregion.name %></td>
+        <td><%= conservedregion.score %></td>
+        <td><%= conservedregion.start %></td>
+        <td><%= conservedregion.end %></td>
+        <td><%= conservedregion.type %></td>
+        <td><%= link_to 'Show', conservedregion %></td>
+        <td><%= link_to 'Edit', edit_conservedregion_path(conservedregion) %></td>
+        <td><%= link_to 'Destroy', conservedregion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conservedregion', new_conservedregion_path %>

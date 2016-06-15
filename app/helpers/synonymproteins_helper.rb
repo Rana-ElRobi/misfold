@@ -1,0 +1,2 @@
+module SynonymproteinsHelper
+end

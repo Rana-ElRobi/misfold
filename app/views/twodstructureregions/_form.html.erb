@@ -1,0 +1,29 @@
+<%= form_for(@twodstructureregion) do |f| %>
+  <% if @twodstructureregion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@twodstructureregion.errors.count, "error") %> prohibited this twodstructureregion from being saved:</h2>
+
+      <ul>
+      <% @twodstructureregion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.number_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.number_field :end %>
+  </div>
+  <div class="field">
+    <%= f.label :regiontype %><br>
+    <%= f.text_field :regiontype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

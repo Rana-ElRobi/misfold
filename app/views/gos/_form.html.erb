@@ -1,0 +1,33 @@
+<%= form_for(@go) do |f| %>
+  <% if @go.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@go.errors.count, "error") %> prohibited this go from being saved:</h2>
+
+      <ul>
+      <% @go.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :annotations %><br>
+    <%= f.text_field :annotations %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

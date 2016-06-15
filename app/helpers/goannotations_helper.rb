@@ -1,0 +1,2 @@
+module GoannotationsHelper
+end

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @typedefinitionprotein.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @typedefinitionprotein.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @typedefinitionprotein.neighbors %>
+</p>
+
+<p>
+  <strong>Synonym:</strong>
+  <%= @typedefinitionprotein.synonym %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @typedefinitionprotein.definition %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @typedefinitionprotein.comment %>
+</p>
+
+<p>
+  <strong>Is transitive:</strong>
+  <%= @typedefinitionprotein.is_transitive %>
+</p>
+
+<p>
+  <strong>Is obsolete:</strong>
+  <%= @typedefinitionprotein.is_obsolete %>
+</p>
+
+<%= link_to 'Edit', edit_typedefinitionprotein_path(@typedefinitionprotein) %> |
+<%= link_to 'Back', typedefinitionproteins_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@siseasclass) do |f| %>
+  <% if @siseasclass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@siseasclass.errors.count, "error") %> prohibited this siseasclass from being saved:</h2>
+
+      <ul>
+      <% @siseasclass.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :diseasclass %><br>
+    <%= f.text_field :diseasclass %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

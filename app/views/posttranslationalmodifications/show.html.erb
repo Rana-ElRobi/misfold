@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @posttranslationalmodification.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @posttranslationalmodification.description %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @posttranslationalmodification.position %>
+</p>
+
+<p>
+  <strong>Lenght:</strong>
+  <%= @posttranslationalmodification.lenght %>
+</p>
+
+<p>
+  <strong>Featurekey:</strong>
+  <%= @posttranslationalmodification.featurekey %>
+</p>
+
+<%= link_to 'Edit', edit_posttranslationalmodification_path(@posttranslationalmodification) %> |
+<%= link_to 'Back', posttranslationalmodifications_path %>

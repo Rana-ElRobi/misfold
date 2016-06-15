@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Misfoldmodles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Type</th>
+      <th>Refseqm</th>
+      <th>Refseqp</th>
+      <th>Nuclutidechange</th>
+      <th>Molecularconsequence</th>
+      <th>Aminoacidechange</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @misfoldmodles.each do |misfoldmodle| %>
+      <tr>
+        <td><%= misfoldmodle.id %></td>
+        <td><%= misfoldmodle.type %></td>
+        <td><%= misfoldmodle.refseqm %></td>
+        <td><%= misfoldmodle.refseqp %></td>
+        <td><%= misfoldmodle.nuclutidechange %></td>
+        <td><%= misfoldmodle.molecularconsequence %></td>
+        <td><%= misfoldmodle.aminoacidechange %></td>
+        <td><%= link_to 'Show', misfoldmodle %></td>
+        <td><%= link_to 'Edit', edit_misfoldmodle_path(misfoldmodle) %></td>
+        <td><%= link_to 'Destroy', misfoldmodle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Misfoldmodle', new_misfoldmodle_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Xrefproteins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Xrefname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @xrefproteins.each do |xrefprotein| %>
+      <tr>
+        <td><%= xrefprotein.xrefname %></td>
+        <td><%= link_to 'Show', xrefprotein %></td>
+        <td><%= link_to 'Edit', edit_xrefprotein_path(xrefprotein) %></td>
+        <td><%= link_to 'Destroy', xrefprotein, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Xrefprotein', new_xrefprotein_path %>

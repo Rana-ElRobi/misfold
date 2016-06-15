@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniprot:</strong>
+  <%= @protein.uniprot_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @protein.name %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @protein.length %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @protein.sequence %>
+</p>
+
+<%= link_to 'Edit', edit_protein_path(@protein) %> |
+<%= link_to 'Back', proteins_path %>

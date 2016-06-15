@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Is Adiseases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Neighbors</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @is_adiseases.each do |is_adisease| %>
+      <tr>
+        <td><%= is_adisease.id %></td>
+        <td><%= is_adisease.name %></td>
+        <td><%= is_adisease.neighbors %></td>
+        <td><%= link_to 'Show', is_adisease %></td>
+        <td><%= link_to 'Edit', edit_is_adisease_path(is_adisease) %></td>
+        <td><%= link_to 'Destroy', is_adisease, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Is adisease', new_is_adisease_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@typedefinitiondiseaseneighbor) do |f| %>
+  <% if @typedefinitiondiseaseneighbor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@typedefinitiondiseaseneighbor.errors.count, "error") %> prohibited this typedefinitiondiseaseneighbor from being saved:</h2>
+
+      <ul>
+      <% @typedefinitiondiseaseneighbor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :neighbor %><br>
+    <%= f.text_field :neighbor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

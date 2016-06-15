@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @relationship.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @relationship.name %>
+</p>
+
+<p>
+  <strong>Neighbors:</strong>
+  <%= @relationship.neighbors %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @relationship.type %>
+</p>
+
+<%= link_to 'Edit', edit_relationship_path(@relationship) %> |
+<%= link_to 'Back', relationships_path %>

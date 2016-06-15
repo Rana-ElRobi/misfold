@@ -1,0 +1,45 @@
+<%= form_for(@misfoldmodle) do |f| %>
+  <% if @misfoldmodle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@misfoldmodle.errors.count, "error") %> prohibited this misfoldmodle from being saved:</h2>
+
+      <ul>
+      <% @misfoldmodle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :refseqm %><br>
+    <%= f.text_field :refseqm %>
+  </div>
+  <div class="field">
+    <%= f.label :refseqp %><br>
+    <%= f.text_field :refseqp %>
+  </div>
+  <div class="field">
+    <%= f.label :nuclutidechange %><br>
+    <%= f.text_field :nuclutidechange %>
+  </div>
+  <div class="field">
+    <%= f.label :molecularconsequence %><br>
+    <%= f.text_field :molecularconsequence %>
+  </div>
+  <div class="field">
+    <%= f.label :aminoacidechange %><br>
+    <%= f.text_field :aminoacidechange %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

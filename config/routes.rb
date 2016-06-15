@@ -1,53 +1,54 @@
 Rails.application.routes.draw do
-  resources :isadiseaseneighbors
-  resources :typedefinitiondiseaseneighbors
-  resources :diseasesynonyms
-  resources :disxrefs
-  resources :diseasesubsets
-  resources :intersectionneighbors
-  resources :relationshipneighbors
-  resources :isaproneighbors
-  resources :typedefinitionproteinneighbors
-  resources :disjointneighbors
-  resources :xrefproteins
-  resources :synonymproteins
-  resources :goannotations
-  resources :keywords
-  resources :is_adiseases
-  resources :typedefinitiondiseases
-  resources :diseaseontologies
-  resources :pathologies
-  resources :organs
-  resources :siseasclasses
-  resources :diseasefamilies
-  resources :omims
-  resources :diseases
-  resources :references
-  resources :misfoldmodles
-  resources :intersection_ofs
-  resources :relationships
-  resources :is_aproteins
-  resources :typedefinitionproteins
-  resources :disjoint_froms
-  resources :proteinontologies
-  resources :externalsoforms
-  resources :transcriptmodificationregions
-  resources :transcripts
-  resources :gos
-  resources :posttranslationalmodifications
-  resources :pathways
-  resources :conservedregions
-  resources :predictiontools
-  resources :functions
-  resources :twodstructureregions
-  resources :pdbs
-  resources :genes
-  resources :proteinnames
-  resources :proteins
+  # resources :isadiseaseneighbors
+  # resources :typedefinitiondiseaseneighbors
+  # resources :diseasesynonyms
+  # resources :disxrefs
+  # resources :diseasesubsets
+  # resources :intersectionneighbors
+  # resources :relationshipneighbors
+  # resources :isaproneighbors
+  # resources :typedefinitionproteinneighbors
+  # resources :disjointneighbors
+  # resources :xrefproteins
+  # resources :synonymproteins
+  # resources :goannotations
+  # resources :keywords
+  # resources :is_adiseases
+  # resources :typedefinitiondiseases
+  # resources :diseaseontologies
+  # resources :pathologies
+  # resources :organs
+  # resources :siseasclasses
+  # resources :diseasefamilies
+  # resources :omims
+  # resources :diseases
+  # resources :references
+  # resources :misfoldmodles
+  # resources :intersection_ofs
+  # resources :relationships
+  # resources :is_aproteins
+  # resources :typedefinitionproteins
+  # resources :disjoint_froms
+  # resources :proteinontologies
+  # resources :externalsoforms
+  # resources :transcriptmodificationregions
+  # resources :transcripts
+  # resources :gos
+  # resources :posttranslationalmodifications
+  # resources :pathways
+  # resources :conservedregions
+  # resources :predictiontools
+  # resources :functions
+  # resources :twodstructureregions
+  # resources :pdbs
+  # resources :genes
+  # resources :proteinnames
+  # resources :proteins
   #get 'protein', to: :biomart
   get '/biomart', to: "proteins#biomart"
   get '/ncbi', to: "proteins#ncbi"
-  get '/ncbi', to: "proteins#kegg"
+  get '/kegg', to: "proteins#kegg"
+  get '/parsing', to: "proteins#parsing"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

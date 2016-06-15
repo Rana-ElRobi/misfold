@@ -1,7 +1,8 @@
 require "rubygems"
-#require "biomart"
+
+
 class ProteinsController < ApplicationController
-  before_action :set_protein, only: [:show, :edit, :update, :destroy]
+  # before_action :set_protein, only: [:show, :edit, :update, :destroy]
 
   # GET /proteins
   # GET /proteins.json
@@ -74,21 +75,34 @@ class ProteinsController < ApplicationController
   # family_description is protein function
   
   def biomart
-    biomartcon = Biomart::Server.new( "http://www.sanger.ac.uk/htgt/biomart" )
+    @biomartcon = Biomart::Server.new( "http://grch37.ensembl.org/biomart/martservice" )
 
-    @res = htgt.datasets["hsapiens_gene_ensembl"].search(
+    hsp = @biomartcon.datasets["hsapiens_gene_ensembl"]
+    hsapien_avail_attrs = hsp.list_attributes.sort
+
+    puts "available:\n", hsapien_avail_attrs, "\nfiltered:"
+
+    # 
+    desired_list = [
+         "entrezgene",
+        "chromosome_name",
+        # "go_id", "name_1006" ,"pdb","hgnc_id",
+         # "refseq_mrna","refseq_peptide",
+         # "description","family_description"
+    ]
+
+    puts final_list = desired_list.select{|att| hsapien_avail_attrs.include?(att) }
+
+    @res = @biomartcon.datasets["hsapiens_gene_ensembl"].search(
       :filters => {
         "uniprot_swissprot" => "P02671",
-       
       },
-      :attributes => [
-        "entrezgene", "chromosome_name",
-        "go_id", "name_1006" ,"pdb","hgnc_id",
-        "refseq_mrna","refseq_peptide","protein_id",
-        "description","family_description"
-      ],
-      :required_attributes => ["entrezgene"]
+      attributes: final_list
+      # ,
+      # :required_attributes => ["entrezgene"]
     )
+    puts @res
+    render nothing: true
   end
 
   #In this function we take the list of enteries (NCBI Ids)
@@ -129,15 +143,12 @@ class ProteinsController < ApplicationController
 
   def ncbi
     #list of NCBI ids
-    list = []
+    list = ["P02671"]
     ncbi = Bio::NCBI::REST::EFetch.new
-    
     #to fetch gene sequence
-    @gene = ncbi.nucleotide(list)
-
+    @gene = ncbi.nucleotide(list,"native")
     #to fetch protein sequence
     @proteinseq = ncbi.protein(list)
-
     #to fetch omim data
     @omim = ncbi.omim(list)
   end
@@ -155,9 +166,26 @@ class ProteinsController < ApplicationController
 
   def kegg
     #ta2reban ncbi ids
-    list = [gene_ids]
+    # list = [gene_ids]
     #serv = Bio::KEGG::API.new
     #@pathways = serv.get_pathways_by_genes(list)
+  end
+
+  def parsing
+    # first step
+    # xlsx = Roo::Spreadsheet.open(Rails.root.join('public', 'mfold.xlsx'), extension: :xlsx)
+
+    # @info = xlsx.sheet(0).parse(
+    #   diseaseid: "ID", 
+    #   diseasename: "Disease", 
+    #   icd10id: "ICD-10", 
+    #   clinicalpicture: "Clinical Picture",
+    # )
+    # @info.shift
+    # Disease.create!(@info)
+
+    # Second step
+    # 
   end
 
   private

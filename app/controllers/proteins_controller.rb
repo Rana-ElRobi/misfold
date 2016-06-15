@@ -88,6 +88,38 @@ class ProteinsController < ApplicationController
     )
   end
 
+  #In this function we take the list of enteries (NCBI Ids)
+  # resulted from biomart function
+  # request gene name,gene sequence and protein sequence
+  # Important Link
+  # http://bioruby.org/rdoc/Bio/NCBI/REST/EFetch/Methods.html#method-i-sequence
+
+  # for protein sequence 
+  # protein(ids, format = "gp", hash = {})
+  # Retrieve protein sequence entries by given IDs using E-Utils (efetch).
+      #Arguments:
+      ##ids: list of NCBI entry IDs (required)
+      #format: “gp”, “gpc”, “fasta”, “acc”, “xml” etc.
+      #Returns
+      ##String
+  # Arguments:
+  # ids: list of NCBI entry IDs (required)
+  # format: “gb”, “gbc”, “fasta”, “acc”, “xml” etc.
+  # Returns :String
+
+  # For Gene Sequence
+  # nucleotide(ids, format = "gb", hash = {})
+  # Retrieve nucleotide sequence entries by given IDs using E-Utils (efetch).
+      #Arguments:
+      ##ids: list of NCBI entry IDs (required)
+      #format: “gp”, “gpc”, “fasta”, “acc”, “xml” etc.
+      #Returns
+      ##String
+
+  def ncbi
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_protein

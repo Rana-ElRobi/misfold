@@ -70,6 +70,8 @@ class ProteinsController < ApplicationController
   # enter the database target in ensamble
   # write filters name => values
   # list the needed attributes
+  # Discription is gene name
+  # family_description is protein function
   
   def biomart
     biomartcon = Biomart::Server.new( "http://www.sanger.ac.uk/htgt/biomart" )
@@ -82,7 +84,8 @@ class ProteinsController < ApplicationController
       :attributes => [
         "entrezgene", "chromosome_name",
         "go_id", "name_1006" ,"pdb","hgnc_id",
-        "refseq_mrna","refseq_peptide","protein_id"
+        "refseq_mrna","refseq_peptide","protein_id",
+        "description","family_description"
       ],
       :required_attributes => ["entrezgene"]
     )
@@ -117,7 +120,15 @@ class ProteinsController < ApplicationController
       ##String
 
   def ncbi
+    #list of NCBI ids
+    list = []
+    ncbi = Bio::NCBI::REST::EFetch.new
+    
+    #to fetch gene sequence
+    ncbi.nucleotide(list)
 
+    #to fetch protein sequence
+    ncbi.protein(list)
   end
 
   private

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612230449) do
+ActiveRecord::Schema.define(version: 20160615234131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -171,7 +171,7 @@ ActiveRecord::Schema.define(version: 20160612230449) do
 
   create_table "misfoldmodles", force: :cascade do |t|
     t.integer  "misfoldid"
-    t.string   "type"
+    t.string   "cause"
     t.string   "refseqm"
     t.string   "refseqp"
     t.string   "nuclutidechange"
@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 20160612230449) do
     t.string   "aminoacidechange"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "diseaseid"
   end
 
   create_table "omims", force: :cascade do |t|
@@ -187,12 +188,14 @@ ActiveRecord::Schema.define(version: 20160612230449) do
     t.string   "moodofinheritnce"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "diseaseid"
   end
 
   create_table "organs", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "diseaseid"
   end
 
   create_table "pathologies", force: :cascade do |t|
@@ -200,11 +203,12 @@ ActiveRecord::Schema.define(version: 20160612230449) do
     t.string   "microscopicpicture"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "diseaseid"
   end
 
   create_table "pathways", force: :cascade do |t|
     t.integer  "pathwayid"
-    t.string   "url"
+    t.string   "pathwayurl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -259,6 +263,7 @@ ActiveRecord::Schema.define(version: 20160612230449) do
     t.text     "sequence"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "diseaseid"
   end
 
   create_table "references", force: :cascade do |t|
@@ -270,6 +275,7 @@ ActiveRecord::Schema.define(version: 20160612230449) do
     t.string   "otherresource"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "diseaseid"
   end
 
   create_table "relationshipneighbors", force: :cascade do |t|

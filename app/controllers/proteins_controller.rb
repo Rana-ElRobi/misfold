@@ -172,20 +172,97 @@ class ProteinsController < ApplicationController
   end
 
   def parsing
-    # first step
-    # xlsx = Roo::Spreadsheet.open(Rails.root.join('public', 'mfold.xlsx'), extension: :xlsx)
+    xlsx = Roo::Spreadsheet.open(Rails.root.join('public', 'mfold.xlsx'), extension: :xlsx)
 
+    # First step: Fill Diseases table
     # @info = xlsx.sheet(0).parse(
-    #   diseaseid: "ID", 
-    #   diseasename: "Disease", 
-    #   icd10id: "ICD-10", 
+    #   diseaseid: "ID",
+    #   diseasename: "Disease",
+    #   icd10id: "ICD-10",
     #   clinicalpicture: "Clinical Picture",
     # )
-    # @info.shift
+    # # @info.shift
     # Disease.create!(@info)
 
-    # Second step
-    # 
+
+    # Second step: Fill References table
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      otherresource: "Other Mutation references (Protein)",
+      clinicalreference: "Clinical References (Disease)",
+      retrievablereference: "Retrievable References (Disease/Protein)",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.references.create!(i)
+      end
+    end
+
+
+    # Third Step: Pathology
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      grosspicture: "Gross Picture",
+      microscopicpicture: "Microscopic Picture",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.pathologies.create!(i)
+      end
+    end
+
+
+    # Forth step: OMIM
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      omimid: "MIM_ID",
+      moodofinheritnce: "Phenotype Inheritance",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.create_omim!(i)
+      end
+    end
+
+
+    # Fifth step: organ
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      name: "Target Organ",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.create_organ!(i)
+      end
+    end
+
+    # Sixth step: protein
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      uniprot_id: "UniProt ID",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.create_protein!(i)
+      end
+    end
+
+    # Seventh step: cause of misfold
+    @info = xlsx.sheet(0).parse(
+      diseaseid: "ID",
+      cause: "Cause of misfold",
+    )
+    @info.each do |i|
+      d = Disease.find_by( diseaseid: i[:diseaseid] )
+      if d.present?
+        d.create_misfoldmodle!(i)
+      end
+    end
   end
 
   private

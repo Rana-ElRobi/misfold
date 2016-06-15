@@ -1,4 +1,4 @@
-class Protein < ActiveRecord::Base	
+class Protein < ActiveRecord::Base
 	has_many :twodstructureregion
 	has_many :function
 	has_and_belongs_to_many :gene
@@ -11,7 +11,7 @@ class Protein < ActiveRecord::Base
 	has_many :proteinname
 	has_many :externalsoform
 	has_one :proteinontology
-	has_and_belongs_to_many :disease
+	belongs_to :disease
 	has_and_belongs_to_many :misfold
 
 end

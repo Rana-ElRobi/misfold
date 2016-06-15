@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   #get 'protein', to: :biomart
   get '/biomart', to: "proteins#biomart"
   get '/ncbi', to: "proteins#ncbi"
-  
+  get '/ncbi', to: "proteins#kegg"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

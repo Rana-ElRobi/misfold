@@ -1,3 +1,5 @@
+require "rubygems"
+#require "biomart"
 class ProteinsController < ApplicationController
   before_action :set_protein, only: [:show, :edit, :update, :destroy]
 
@@ -9,7 +11,10 @@ class ProteinsController < ApplicationController
 
   # GET /proteins/1
   # GET /proteins/1.json
+ 
   def show
+    
+
   end
 
   # GET /proteins/new
@@ -59,6 +64,28 @@ class ProteinsController < ApplicationController
       format.html { redirect_to proteins_url, notice: 'Protein was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  #In this function i will connect to Biomart API to get protin data
+  # enter the database target in ensamble
+  # write filters name => values
+  # list the needed attributes
+  
+  def biomart
+    biomartcon = Biomart::Server.new( "http://www.sanger.ac.uk/htgt/biomart" )
+
+    @res = htgt.datasets["hsapiens_gene_ensembl"].search(
+      :filters => {
+        "uniprot_swissprot" => "P02671",
+       
+      },
+      :attributes => [
+        "entrezgene", "chromosome_name",
+        "go_id", "name_1006" ,"pdb","hgnc_id",
+        "refseq_mrna","refseq_peptide","protein_id"
+      ],
+      :required_attributes => ["entrezgene"]
+    )
   end
 
   private

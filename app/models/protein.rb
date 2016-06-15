@@ -1,6 +1,4 @@
-class Protein < ActiveRecord::Base
-	attr_accessible :uniprot :name :length :sequence
-	
+class Protein < ActiveRecord::Base	
 	has_many :twodstructureregion
 	has_many :function
 	has_and_belongs_to_many :gene
